@@ -1,29 +1,26 @@
-#### Lab 5: Build an Artificial Neural Network by implementing the Backpropagation algorithm and test the same using appropriate data sets.
-
-##### BACKPROPAGATION (training_example, ƞ, nin, nout, nhidden )
+#### Lab 5: Build an Artificial Neural Network by implementing the Backpropagation algorithm and test the same using appropriate data sets
 
 
-```python
+
 import numpy as np
 X = np.array(([2, 9], [1, 5], [3, 6]), dtype=float)
 y = np.array(([92], [86], [89]), dtype=float)
 X = X/np.amax(X,axis=0) # maximum of X array longitudinally
 y = y/100
 
-#Sigmoid Function
-def sigmoid (x):
-    return 1/(1 + np.exp(-x))
-
+#Sigmoid Funct
+def sigmoid (x
+    return 1/(1  np.exp(-x))
 #Derivative of Sigmoid Function
 def derivatives_sigmoid(x):
     return x * (1 - x)
 
 #Variable initialization
-epoch=5000                #Setting training iterations
-lr=0.1                    #Setting learning rate
-inputlayer_neurons = 2    #number of features in data set
-hiddenlayer_neurons = 3   #number of hidden layers neurons
-output_neurons = 1        #number of neurons at output layer
+epoch=5000                
+lr=0.1                    
+inputlayer_neurons = 2   
+hiddenlayer_neurons = 3  
+output_neurons = 1        
 
 #weight and bias initialization
 wh=np.random.uniform(size=(inputlayer_neurons,hiddenlayer_neurons))
